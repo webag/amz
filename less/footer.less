@@ -1,0 +1,65 @@
+.l-footer{
+	min-width: 1250px;
+	padding-left: 15px;
+	margin-top: 50px;
+	background-color: @color-panels;
+	color: #FFF;
+	min-height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.btn{
+		margin-right: 15px;
+	}
+}
+
+//social
+.social{
+	margin-left: auto;
+	display: flex;
+	margin-right: 15px;
+
+	.btn{
+		font-size: 20px;
+		margin-right: 5px;
+	}
+}
+//social
+
+//buy-panel
+.buy-panel{
+	display: flex;
+	align-self: stretch;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-color: @color-attention;
+	text-align: center;
+	padding: 10px 40px;
+	transition: all 0.3s ease;
+
+	&:hover{
+		background-color: lighten(@color-attention,5%);
+	}
+
+	&:active{
+		background-color: darken(@color-attention,5%);
+		box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.3);
+	}
+
+	&__title{
+		display: block;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	&__descr{
+		font-size: 11px;
+		letter-spacing: 0.06em;
+	}
+}
+//buy-panel

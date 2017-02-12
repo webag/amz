@@ -1,0 +1,59 @@
+.l-header{
+	min-width: 1250px;
+	background-color: @color-panels;
+	color: #FFF;
+	padding: 16px 15px 16px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.btn{
+		margin-left: 15px;
+	}
+}
+
+
+//totals
+.totals{
+	display: flex;
+	margin-left: auto;
+}
+
+.totals-item{
+	position: relative;
+	text-align: center;
+	padding: 0 20px;
+
+	&:after{
+		content: '';
+		width: 1px;
+		height: 30px;
+		background-color: @color-text--grey;
+		opacity: 0.5;
+		position: absolute;
+		right: 0;
+		top: 17px;
+	}
+
+	&:first-child{
+		padding: 0 40px;
+	}
+
+	&:last-child{
+		&:after{
+			display: none;
+		}
+	}
+
+	&__title{
+		font-size: 13px;
+		color: @color-text--grey;
+		margin-bottom: 2px;
+	}
+
+	&__val{
+		font-size: 28px;
+		line-height: 1;
+	}
+}
+//totals
