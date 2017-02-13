@@ -1,55 +1,29 @@
-.l-maintable{
-	min-width: 1250px;
-}
 //maintable-header
 .maintable-header{
 	background-color: #f1f6ff;
 	color: #757575;
 	font-weight: bold;
-	font-size: 12px;
-	@media (max-width: 1500px){
-		font-size: 10px;
-	}
+	border-bottom: 1px solid #dddddd;
+	height: 40px;
 
 	.col{
-		height: 40px;
-		line-height: 1.1;
-		border-bottom: 1px solid #dddddd;
-	}
-
-	&__table{
-		display: table;
-		border-collapse: collapse;
-		width: 100%;
-
-		&.fixed{
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 10;
-		}
-	}
-
-	&__placer{
-		height: 41px;
+		padding: 8px 2px;
+		line-height: 1.4em;
+		cursor: pointer;
 	}
 }
 //maintable-header
 
 
 //maintable__row
-.maintable{
-	display: table;
-	border-collapse: collapse;
-	width: 100%;
-}
-
 .maintable__row{
-	font-size: 13px;
 	background-color: #FFF;
-	@media (max-width: 1500px){
-		font-size: 12px;
+	height: 34px;
+	@media (max-width: 1600px){
+		height: 32px;
+	}
+	@media (max-width: 1366px){
+		height: 30px;
 	}
 	&:nth-child(2n+1){
 		background-color: #f5f5f5;
@@ -59,29 +33,7 @@
 	}
 
 	.col{
-		height: 34px;
-
-		&-2{
-			a{
-				display: block;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-		}
-		&-3{
-			small{
-				display: block;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-		}
-		&-9{
-			small{
-				display: block;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-		}
+		padding: 4px 2px;
 	}
 
 	a{
@@ -95,6 +47,12 @@
 
 	small{
 		font-size: 11px;
+		@media (max-width: 1600px){
+			font-size: 10px;
+		}
+		@media (max-width: 1366px){
+			font-size: 9px;
+		}
 	}
 	
 	.grey{
@@ -172,90 +130,123 @@
 
 //column sizes
 .maintable-header,.maintable__row{
-	display: table-row;
+	display: flex;
+	justify-content: space-between;
+	align-content: stretch;
+	align-items: center;
 
 	.col{
-		display: table-cell;
-		vertical-align: middle;
 		white-space: nowrap;
-		padding: 5px 6px;
-		max-width: 0;
-
-		&-1{
-			width: 1.5%;
-			text-align: center;
+		font-size: 12px;
+		@media (max-width: 1600px){
+			font-size: 11px;
 		}
-		&-2{
-			width: 19.5%;
-		}
-		&-3{
-			width: 7%;
-		}
-		&-4{
-			width: 4%;
-		}
-		&-5{
-			width: 4.5%;
-		}
-		&-6{
-			width: 4.5%;
-		}
-		&-7{
-			width: 5.5%;
-		}
-		&-8{
-			width: 2%;
-			text-align: center;
-		}
-		&-9{
-			width: 7%;
-		}
-		&-10{
-			width: 3%;
-			text-align: center;
-		}
-		&-11{
-			width: 4%;
-			text-align: center;
-		}
-		&-12{
-			width: 3.5%;
-			text-align: center;
-		}
-		&-13{
-			width: 7.5%;
-			text-align: center;
-		}
-		&-14{
-			width: 5%;
-			text-align: center;
-		}
-		&-15{
-			width: 6%;
-			text-align: center;
-		}
-		&-16{
-			width: 3%;
-			text-align: center;
-		}
-		&-17{
-			width: 4%;
-			text-align: center;
-		}
-		&-18{
-			width: 4%;
-			justify-content: center;
-			text-align: center;
-		}
-		&-19{
-			width: 70px;
-			text-align: right;
-		}
-		&-20{
-			flex-basis: 50px;
-			width: 50px;
-			text-align: right;
+		@media (max-width: 1366px){
+			font-size: 10px;
 		}
 	}
+}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.col-n {
+	width: 25%;
+	text-align: center;
+}
+
+.col-oversize {
+	width: 50%;
+}
+.col-name {
+	.ellipsis;
+	text-align: left;
+	width: 310%;
+}
+.col-brand {
+	font-size: 11px;
+	.ellipsis;
+	width: 100%;
+}
+.col-price {
+	text-align: left;
+	.ellipsis;
+	width: 85%;
+}
+.col-fees {
+	text-align: left;
+	width: 60%;
+}
+.col-net {
+	text-align: left;
+	.ellipsis;
+	width: 60%;
+}
+.col-mi {
+	width: 60%;
+	text-align: left;
+}
+.col-lqs {
+	text-align: center;
+	width: 35%;
+}
+.col-category {
+	text-align: left;
+	.ellipsis;
+	width: 110%;
+}
+.col-sellers {
+	width: 40%;
+	text-align: center;
+}
+.col-rank {
+	width: 75%;
+	text-align: center;
+}
+.col-sales {
+	width: 60%;
+	text-align: center;
+}
+.col-revenue {
+	width: 110%;
+	text-align: center;
+}
+.col-reviews {
+	width: 50%;
+	text-align: center;
+}
+.col-rpr {
+	width: 60%;
+}
+.col-date {
+	width: 75%;
+	text-align: center;
+}
+.col-rating {
+	width: 50%;
+	text-align: center;
+}
+.col-variants {
+	width: 50%;
+	text-align: center;
+}
+.col-weight {
+	width: 50%;
+}
+.col-seller {
+	width: 50%;
+	text-align: center;
+}
+.col-ali{
+	flex-shrink: 0;
+	width: 40px;
+}
+.col-close{
+	text-align: center;
+	flex-shrink: 0;
+	width: 30px;
 }
 //column sizes

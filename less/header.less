@@ -1,11 +1,16 @@
 .l-header{
-	min-width: 1250px;
 	background-color: @color-panels;
 	color: #FFF;
 	padding: 16px 15px 16px 40px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@media (max-width: 1600px){
+		padding: 13px 15px 13px 40px;
+	}
+	@media (max-width: 1366px){
+		padding: 10px 15px 10px 40px;
+	}
 
 	.btn{
 		margin-left: 15px;
@@ -54,6 +59,12 @@
 	&__val{
 		font-size: 28px;
 		line-height: 1;
+		@media (max-width: 1600px){
+			font-size: 24px;
+		}
+		@media (max-width: 1366px){
+			font-size: 20px;
+		}
 	}
 }
 //totals

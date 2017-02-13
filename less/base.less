@@ -1,3 +1,22 @@
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: @color-panels;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: @color-panels;
+}
+
 body{
 	font-family: @font;
 	font-size: 14px;
@@ -14,6 +33,12 @@ h1{
 h2{
 	font-weight: 600;
 	font-size: 24px;
+	@media (max-width: 1600px){
+		font-size: 22px;
+	}
+	@media (max-width: 1366px){
+		font-size: 20px;
+	}
 }
 
 h3{

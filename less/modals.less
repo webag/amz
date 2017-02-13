@@ -40,7 +40,7 @@
 }
 
 .agmodal__wrapper{
-	position: fixed;
+	position: absolute;
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -109,16 +109,35 @@ html{
 	width: 400px;
 	padding: 25px 35px 35px 35px;
 	border-radius: 5px;
+	@media (max-width: 1600px){
+		padding: 20px 30px 30px 30px;
+	}
+	@media (max-width: 1366px){
+		padding: 15px 25px 25px 25px;
+	}
 
 	&__header{
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-end;
 		padding-bottom: 15px;
 		border-bottom: 1px solid #d5e0e8;
+		@media (max-width: 1600px){
+			padding-bottom: 13px;
+		}
+		@media (max-width: 1366px){
+			padding-bottom: 10px;
+		}
 	}
 
 	&__main{
 		padding-top: 25px;
+		@media (max-width: 1600px){
+			padding-top: 23px;
+		}
+		@media (max-width: 1366px){
+			padding-top: 20px;
+		}
 	}
 
 	&__footer{
@@ -126,6 +145,15 @@ html{
 		margin: 30px -35px -35px -35px;
 		padding: 20px 35px;
 		border-radius: 0 0 5px 5px;
+		@media (max-width: 1600px){
+			margin: 25px -30px -30px -30px;
+			padding: 15px 30px;
+		}
+		@media (max-width: 1366px){
+			margin: 20px -20px -20px -20px;
+			margin: 20px -20px -20px -20px;
+			padding: 10px 25px;
+		}
 	}
 }
 //modal-styles
@@ -225,6 +253,12 @@ html{
 //modal-login
 .modal--login{
 	width: 670px;
+	@media (max-width: 1600px){
+		width: 630px;
+	}
+	@media (max-width: 1366px){
+		width: 610px;
+	}
 
 	.modal__main{
 		display: flex;
@@ -234,6 +268,12 @@ html{
 	.grid-6{
 		width: 50%;
 		padding: 0 25px;
+		@media (max-width: 1600px){
+			padding: 0 20px;
+		}
+		@media (max-width: 1366px){
+			padding: 0 15px;
+		}
 		&:first-child{
 			padding-right: 55px;
 			border-right: 1px solid #d5e0e8;
@@ -288,6 +328,12 @@ html{
 		}
 		span{
 			font-size: 12px;
+			@media (max-width: 1600px){
+				font-size: 11px;
+			}
+			@media (max-width: 1366px){
+				font-size: 10px;
+			}
 		}
 	}
 }
@@ -322,7 +368,7 @@ html{
 
 //modal-trial
 .trial-wrapper{
-	position: fixed;
+	position: absolute;
 	background: url("../img/blur.jpg") center center no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -382,7 +428,7 @@ html{
 	vertical-align: middle;
 	width: 820px;
 	position: relative;
-	margin: 20px 0 70px 0;
+	margin: 20px 0 80px 0;
 	background: #fcfcfc;
 	border-radius: 5px;
 	padding: 25px 35px 35px 35px;
@@ -393,6 +439,12 @@ html{
 	transform-origin: center top;
 	cursor: auto;
 	will-change: opacity,tranform;
+	@media (max-width: 1600px){
+		padding: 20px 30px 30px 30px;
+	}
+	@media (max-width: 1366px){
+		padding: 15px 25px 25px 25px;
+	}
 
 	.modal__header{
 		border-bottom: none;
@@ -410,6 +462,18 @@ html{
 		font-size: 18px;
 		padding: 13px;
 		text-align: center;
+		@media (max-width: 1600px){
+			padding: 10px;
+			font-size: 16px;
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+		@media (max-width: 1366px){
+			padding: 8px;
+			font-size: 14px;
+			margin-left: -25px;
+			margin-right: -25px;
+		}
 	}
 
 	&__main{
@@ -417,12 +481,24 @@ html{
 		justify-content: space-between;
 		align-items: flex-start;
 		padding: 25px 0;
+		@media (max-width: 1600px){
+			padding: 20px 0;
+		}
+		@media (max-width: 1366px){
+			padding: 15px 0 5px 0;
+		}
 	}
 
 	.modal__footer{
 		margin-top: 0;
 		font-size: 18px;
 		text-align: center;
+		@media (max-width: 1600px){
+			font-size: 16px;
+		}
+		@media (max-width: 1366px){
+			font-size: 14px;
+		}
 	}
 
 	&__extend{
@@ -434,10 +510,22 @@ html{
 		width: 100%;
 		left: 0;
 		color: #FFF;
+		@media (max-width: 1600px){
+			bottom: -60px;
+		}
+		@media (max-width: 1366px){
+			bottom: -50px;
+		}
 
 		span{
 			font-size: 18px;
 			margin-right: 20px;
+			@media (max-width: 1600px){
+				font-size: 16px;
+			}
+			@media (max-width: 1366px){
+				font-size: 14px;
+			}
 		}
 	}
 }
@@ -454,6 +542,13 @@ html{
 		display: block;
 		font-size: 18px;
 		margin-bottom: 20px;
+		@media (max-width: 1600px){
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		@media (max-width: 1366px){
+			margin-bottom: 10px;
+		}
 	}
 
 	&__price{
@@ -464,6 +559,12 @@ html{
 
 	&__icons{
 		margin-top: 100px;
+		@media (max-width: 1600px){
+			margin-top: 95px;
+		}
+		@media (max-width: 1366px){
+			margin-top: 80px;
+		}
 	}
 
 	.icon-block{
@@ -485,6 +586,13 @@ html{
 		display: block;
 		font-size: 18px;
 		margin-bottom: 30px;
+		@media (max-width: 1600px){
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+		@media (max-width: 1366px){
+			margin-bottom: 15px;
+		}
 	}
 }
 
@@ -502,6 +610,12 @@ html{
 	h4{
 		text-transform: uppercase;
 		margin-bottom: 15px;
+		@media (max-width: 1600px){
+			margin-bottom: 10px;
+		}
+		@media (max-width: 1366px){
+			margin-bottom: 5px;
+		}
 	}
 
 	.panel-link{

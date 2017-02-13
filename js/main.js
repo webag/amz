@@ -1,43 +1,4 @@
 /***********************
-Fixed tableheader BEGIN
-***********************/
-$(document).ready(function() {
-	$(window).on('scroll',function () {
-		var header_height = $('.l-header').outerHeight();
-		var scrolltop = $(this).scrollTop();
-		if(scrolltop > header_height){
-			$('.maintable-header__table').addClass('fixed');
-		} else {
-			$('.maintable-header__table').removeClass('fixed');
-		}
-	})
-});
-/***********************
-Fixed tableheader END
-***********************/
-
-/***********************
-Table sizes BEGIN
-***********************/
-$(document).ready(function() {
-	columns_sizes();
-});
-
-$(window).on('resize',function () {
-	columns_sizes();
-});
-
-function columns_sizes() {
-	for (var i = 1; i < 22; i++) {
-		$('.maintable-header .col-'+i).width($('.maintable .col-'+i).width());
-	}
-}
-/***********************
-Table sizes END
-***********************/
-
-
-/***********************
  agmodal BEGIN
  ***********************/
 $(document).ready(function(){
