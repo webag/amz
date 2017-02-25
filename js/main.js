@@ -35,3 +35,45 @@ $(document).ready(function() {
 /***********************
 Trial modal END
 ***********************/
+
+
+/***********************
+FAQ modal BEGIN
+ ***********************/
+function open_faq_modal() {
+	$('.faq-modal').addClass('faq-modal--visible');
+}
+function close_faq_modal() {
+	$('.faq-modal').removeClass('faq-modal--visible');
+}
+
+$(document).ready(function() {
+	$('.faq-close').on('click',function (e) {
+		e.preventDefault();
+		close_faq_modal();
+	});
+});
+/***********************
+FAQ modal END
+ ***********************/
+
+
+/***********************
+FAQ modal BEGIN
+ ***********************/
+function open_alert_modal() {
+	$('.alert-modal').addClass('alert-modal--visible');
+}
+function close_alert_modal() {
+	$('.alert-modal').removeClass('alert-modal--visible');
+}
+
+$(document).ready(function() {
+	$('.alert-close').on('click',function (e) {
+		e.preventDefault();
+		close_alert_modal();
+	});
+});
+/***********************
+FAQ modal END
+ ***********************/

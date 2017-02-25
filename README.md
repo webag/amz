@@ -1,5 +1,20 @@
 ##Методы для открытия закрытия модальных окон:
 
+#####Окно FAQ:
+```javascript
+open_faq_modal()
+close_faq_modal()
+```
+
+#####Окно ошибки:
+```javascript
+open_alert_modal()
+close_alert_modal()
+```
+
+
+
+
 #####Окно окончания триала:
 ```javascript
 open_trial_modal()
